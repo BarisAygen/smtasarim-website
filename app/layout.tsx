@@ -17,11 +17,6 @@ export const metadata: Metadata = {
   title: "Serhat Kuzu | Costume Designer",
   description:
     "Dizi, film, sinema, tiyatro ve kurumsal projeler için kostüm tasarımı. Serhat Kuzu, artibirtakım ve SMK Tasarım Atölyesi.",
-  icons: {
-    icon: [{ url: "/logo.png", type: "image/png" }],
-    apple: "/logo.png",
-    shortcut: "/logo.png",
-  },
 };
 
 export default function RootLayout({

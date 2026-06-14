@@ -187,8 +187,15 @@ function Hero() {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
+              href="/portfolio.pdf"
+              className="inline-flex h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762] md:hidden"
+            >
+              Portfolyoyu İncele
+              <ArrowIcon />
+            </a>
+            <a
               href={PORTFOLIO_HREF}
-              className="inline-flex h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762]"
+              className="hidden h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762] md:inline-flex"
             >
               Portfolyoyu İncele
               <ArrowIcon />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import PortfolioViewer from "./PortfolioViewer";
 
 export const metadata: Metadata = {
   title: "Portfolyo | Serhat Kuzu",
@@ -40,11 +41,7 @@ export default function PortfolioPage() {
       </header>
 
       <main className="flex flex-1 flex-col">
-        <iframe
-          src="/portfolio.pdf"
-          title="Serhat Kuzu Portfolyo"
-          className="min-h-[calc(100vh-5rem)] w-full flex-1 border-0 bg-[#1a1a1a]"
-        />
+        <PortfolioViewer />
       </main>
     </div>
   );
