@@ -190,7 +190,7 @@ function Hero() {
               href={PORTFOLIO_HREF}
               className="inline-flex h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762]"
             >
-              Portfolyo&apos;yu İncele
+              Portfolyoyu İncele
               <ArrowIcon />
             </a>
             <a

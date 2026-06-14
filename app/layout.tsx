@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   description:
     "Dizi, film, sinema, tiyatro ve kurumsal projeler için kostüm tasarımı. Serhat Kuzu, artibirtakım ve SMK Tasarım Atölyesi.",
   icons: {
-    icon: "/logo.png",
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    apple: "/logo.png",
+    shortcut: "/logo.png",
   },
 };
 
