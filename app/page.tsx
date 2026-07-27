@@ -41,7 +41,7 @@ const brands = [
 ];
 
 const brandTitleClassName =
-  "min-w-0 font-serif text-[0.82rem] font-normal uppercase leading-[1.15] tracking-tight text-[#14110e] sm:text-[0.9rem] md:text-[0.72rem] md:leading-[1.2] lg:text-[0.85rem] xl:text-[0.95rem]";
+  "font-serif text-[1.7rem] font-normal uppercase leading-none tracking-[-0.02em] text-[#14110e] md:text-[1.35rem] lg:text-[1.6rem] xl:text-[1.85rem]";
 
 const expertise = [
   { label: "Kostüm Tasarımı", icon: "costume" },
@@ -261,52 +261,43 @@ function BrandsSection() {
                   : ""
               }`}
             >
-              <div className="grid min-h-[340px] grid-cols-1 sm:min-h-[360px] sm:grid-cols-[minmax(0,46%)_minmax(0,54%)] md:min-h-[400px] lg:min-h-[420px]">
-                <div
-                  className={`relative z-10 flex flex-col justify-between bg-[#e8e4dc] p-6 sm:p-7 md:p-5 lg:p-7 ${
-                    brand.imageSide === "right" ? "sm:order-1" : ""
-                  }`}
-                >
-                  <div className="min-w-0">
-                    <div className="mb-5 flex items-center gap-2.5 md:mb-4 md:gap-2">
-                      <span className="shrink-0 text-[11px] font-bold tracking-[0.34em] text-[#8a5c2a] md:text-[10px]">
-                        {brand.number}
-                      </span>
-                      <span className="h-px w-6 shrink-0 bg-black/20 md:w-4" />
-                      <h2 className={brandTitleClassName}>{brand.title}</h2>
-                    </div>
+              <div className="flex min-h-[420px] flex-col">
+                <div className="relative z-10 bg-[#e8e4dc] px-6 pb-5 pt-7 sm:px-7 md:px-5 md:pb-4 lg:px-7">
+                  <div className="flex items-start gap-3">
+                    <span className="mt-1.5 shrink-0 text-[11px] font-bold tracking-[0.3em] text-[#8a5c2a]">
+                      {brand.number}
+                    </span>
+                    <span className="mt-3 h-px w-7 shrink-0 bg-black/20 md:w-5 lg:w-7" />
+                    <h2 className={brandTitleClassName}>{brand.title}</h2>
+                  </div>
+                </div>
 
+                <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,44%)_minmax(0,56%)]">
+                  <div className="relative z-10 bg-[#e8e4dc] px-6 pb-7 sm:px-7 md:px-5 lg:px-7">
                     {brand.showLogo && (
                       <div className="mb-6">
                         <BrandLogo className="h-12 w-12" />
                       </div>
                     )}
-
                     {brand.subtitle ? (
-                      <p className="text-[10px] font-semibold tracking-[0.3em] text-[#14110e]/45 md:text-[9px] md:tracking-[0.22em]">
+                      <p className="text-[9px] font-semibold tracking-[0.24em] text-[#14110e]/45 lg:text-[10px]">
                         {brand.subtitle}
                       </p>
                     ) : null}
 
-                    <p className="mt-5 text-[13px] leading-[1.75] text-[#14110e]/62 md:mt-4 md:text-[12px] md:leading-[1.7] lg:text-[13px]">
+                    <p className="mt-5 text-[12px] leading-[1.7] text-[#14110e]/62 lg:text-[13px]">
                       {brand.description}
                     </p>
                   </div>
-                </div>
-                <div
-                  className={`relative min-h-[220px] overflow-hidden bg-[#e8e4dc] sm:min-h-full ${
-                    brand.imageSide === "right" ? "sm:order-2" : ""
-                  }`}
-                >
-                  <Image
-                    src={brand.image}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 100vw, 16vw"
-                    className={`object-contain object-bottom opacity-[0.88] ${
-                      brand.imageSide === "right" ? "object-right" : "object-left"
-                    }`}
-                  />
+                  <div className="relative min-h-[280px] overflow-hidden bg-[#e8e4dc]">
+                    <Image
+                      src={brand.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 768px) 56vw, 19vw"
+                      className="object-contain object-[right_bottom] opacity-[0.88]"
+                    />
+                  </div>
                 </div>
               </div>
             </article>
