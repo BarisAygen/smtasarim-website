@@ -19,7 +19,7 @@ const brands = [
   {
     id: "artibirtakim",
     number: "02",
-    title: "ARTIBIRTAKIM",
+    title: "ARTİBİRTAKIM",
     subtitle: "CREATIVE STUDIO",
     description:
       "Dizi, film, tiyatro ve sahne sanatlarına yönelik yaratıcı tasarım, üretim ve uygulama çözümleri.",
@@ -41,7 +41,7 @@ const brands = [
 ];
 
 const brandTitleClassName =
-  "font-serif text-[1.75rem] font-normal uppercase leading-[1.08] tracking-tight text-[#14110e] sm:text-[1.85rem] md:text-[1.45rem] md:leading-[1.12] lg:text-[1.65rem] xl:text-[1.75rem]";
+  "min-w-0 font-serif text-[0.82rem] font-normal uppercase leading-[1.15] tracking-tight text-[#14110e] sm:text-[0.9rem] md:text-[0.72rem] md:leading-[1.2] lg:text-[0.85rem] xl:text-[0.95rem]";
 
 const expertise = [
   { label: "Kostüm Tasarımı", icon: "costume" },
@@ -261,18 +261,19 @@ function BrandsSection() {
                   : ""
               }`}
             >
-              <div className="flex min-h-[360px] flex-col sm:grid sm:min-h-[360px] sm:grid-cols-[44%_56%] md:flex md:min-h-[520px] md:flex-col lg:min-h-[540px]">
+              <div className="grid min-h-[340px] grid-cols-1 sm:min-h-[360px] sm:grid-cols-[minmax(0,46%)_minmax(0,54%)] md:min-h-[400px] lg:min-h-[420px]">
                 <div
-                  className={`relative z-10 flex flex-col justify-between bg-[#e8e4dc] p-7 sm:p-8 md:p-6 md:pb-4 lg:p-7 ${
+                  className={`relative z-10 flex flex-col justify-between bg-[#e8e4dc] p-6 sm:p-7 md:p-5 lg:p-7 ${
                     brand.imageSide === "right" ? "sm:order-1" : ""
                   }`}
                 >
-                  <div>
-                    <div className="mb-8 flex items-center gap-3">
-                      <span className="text-[11px] font-bold tracking-[0.34em] text-[#8a5c2a]">
+                  <div className="min-w-0">
+                    <div className="mb-5 flex items-center gap-2.5 md:mb-4 md:gap-2">
+                      <span className="shrink-0 text-[11px] font-bold tracking-[0.34em] text-[#8a5c2a] md:text-[10px]">
                         {brand.number}
                       </span>
-                      <span className="h-px w-10 bg-black/20" />
+                      <span className="h-px w-6 shrink-0 bg-black/20 md:w-4" />
+                      <h2 className={brandTitleClassName}>{brand.title}</h2>
                     </div>
 
                     {brand.showLogo && (
@@ -281,21 +282,19 @@ function BrandsSection() {
                       </div>
                     )}
 
-                    <h2 className={brandTitleClassName}>{brand.title}</h2>
-
                     {brand.subtitle ? (
-                      <p className="mt-2 text-[10px] font-semibold tracking-[0.3em] text-[#14110e]/45">
+                      <p className="text-[10px] font-semibold tracking-[0.3em] text-[#14110e]/45 md:text-[9px] md:tracking-[0.22em]">
                         {brand.subtitle}
                       </p>
                     ) : null}
 
-                    <p className="mt-6 text-[13px] leading-[1.75] text-[#14110e]/62">
+                    <p className="mt-5 text-[13px] leading-[1.75] text-[#14110e]/62 md:mt-4 md:text-[12px] md:leading-[1.7] lg:text-[13px]">
                       {brand.description}
                     </p>
                   </div>
                 </div>
                 <div
-                  className={`relative z-0 min-h-[220px] shrink-0 overflow-hidden bg-[#e8e4dc] sm:min-h-[240px] md:mt-auto md:min-h-[260px] md:flex-1 lg:min-h-[280px] ${
+                  className={`relative min-h-[220px] overflow-hidden bg-[#e8e4dc] sm:min-h-full ${
                     brand.imageSide === "right" ? "sm:order-2" : ""
                   }`}
                 >
