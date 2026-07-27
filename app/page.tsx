@@ -9,34 +9,37 @@ const brands = [
     id: "serhat-kuzu",
     number: "01",
     title: "Serhat Kuzu",
-    subtitle: "Costume Desıgner",
+    subtitle: "COSTUME DESIGNER",
     description:
       "Kişisel portföy, set çalışmaları, kostüm tasarımları, konsept çizimler ve üretim süreçleri.",
     image: "/column-serhat-kuzu.png",
     imageSide: "right" as const,
     showLogo: false,
+    forceUppercase: true,
   },
   {
     id: "artibirtakim",
     number: "02",
     title: "artıbirtakım",
-    subtitle: "Creative Studio",
+    subtitle: "CREATIVE STUDIO",
     description:
       "Dizi, film, tiyatro ve sahne sanatlarına yönelik yaratıcı tasarım, üretim ve uygulama çözümleri.",
     image: "/column-artibirtakim.png",
     imageSide: "right" as const,
     showLogo: false,
+    forceUppercase: false,
   },
   {
     id: "smk-tasarim",
     number: "03",
-    title: "Serhat Kuzu Atölyesi",
+    title: "Serhat Kuzu\u00A0Atölyesi",
     subtitle: "",
     description:
       "Kurumsal üniforma tasarımı ve üretimi. Teknik koleksiyon geliştirme ve profesyonel üretim çözümleri.",
     image: "/column-smk.png",
     imageSide: "right" as const,
     showLogo: false,
+    forceUppercase: false,
   },
 ];
 
@@ -142,8 +145,8 @@ function Header() {
             <span className="font-serif text-base uppercase tracking-[0.22em] sm:text-lg">
               Serhat Kuzu
             </span>
-            <span className="text-[9px] font-medium uppercase tracking-[0.38em] text-white/50 sm:text-[10px]">
-              Costume Desıgner
+            <span className="text-[9px] font-medium tracking-[0.38em] text-white/50 sm:text-[10px]">
+              COSTUME DESIGNER
             </span>
           </span>
         </a>
@@ -173,8 +176,8 @@ function Hero() {
 
       <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
         <div>
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.45em] text-[#d7a762] sm:mb-6">
-            Costume Desıgner
+          <p className="mb-4 text-[10px] font-semibold tracking-[0.45em] text-[#d7a762] sm:mb-6">
+            COSTUME DESIGNER
           </p>
           <h1 className="max-w-4xl font-serif text-[clamp(2.8rem,10vw,7.5rem)] font-light uppercase leading-[0.88] tracking-tighter">
             Serhat Kuzu
@@ -293,12 +296,16 @@ function BrandsSection() {
                       </div>
                     )}
 
-                    <h2 className="font-serif text-[1.7rem] uppercase leading-[1.05] tracking-tight text-[#14110e] break-words sm:text-[1.85rem] lg:text-[2.05rem] lg:leading-[0.96]">
+                    <h2
+                      className={`font-serif text-[1.7rem] leading-[1.05] tracking-tight text-[#14110e] sm:text-[1.85rem] lg:text-[2.05rem] lg:leading-[0.96] ${
+                        brand.forceUppercase ? "uppercase" : ""
+                      }`}
+                    >
                       {brand.title}
                     </h2>
 
                     {brand.subtitle ? (
-                      <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#14110e]/45">
+                      <p className="mt-2 text-[10px] font-semibold tracking-[0.3em] text-[#14110e]/45">
                         {brand.subtitle}
                       </p>
                     ) : null}
@@ -365,8 +372,8 @@ function Footer() {
                   <p className="font-serif text-2xl uppercase tracking-[0.12em]">
                     Serhat Kuzu
                   </p>
-                  <p className="mt-1 text-[10px] uppercase tracking-[0.38em] text-white/45">
-                    Costume Desıgner
+                  <p className="mt-1 text-[10px] tracking-[0.38em] text-white/45">
+                    COSTUME DESIGNER
                   </p>
                 </div>
               </div>
@@ -383,9 +390,9 @@ function Footer() {
               <address className="space-y-3 not-italic text-sm leading-7 text-white/62">
                 <span className="block">İstanbul, Türkiye</span>
                 <span className="block pt-2 text-white/45">
-                  Kostüm atölye: Nişantaşı Satre
+                  Kostüm Atölye: Nişantaşı Satre
                 </span>
-                <span className="block text-white/45">
+                <span className="block text-white/45 whitespace-nowrap">
                   Serhat Kuzu Atölyesi: Giyimkent
                 </span>
                 <span className="block text-white/45">
