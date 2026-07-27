@@ -9,7 +9,7 @@ const brands = [
     id: "serhat-kuzu",
     number: "01",
     title: "Serhat Kuzu",
-    subtitle: "Costume Designer",
+    subtitle: "Costume Desıgner",
     description:
       "Kişisel portföy, set çalışmaları, kostüm tasarımları, konsept çizimler ve üretim süreçleri.",
     image: "/column-serhat-kuzu.png",
@@ -19,7 +19,7 @@ const brands = [
   {
     id: "artibirtakim",
     number: "02",
-    title: "artibirtakım",
+    title: "artıbirtakım",
     subtitle: "Creative Studio",
     description:
       "Dizi, film, tiyatro ve sahne sanatlarına yönelik yaratıcı tasarım, üretim ve uygulama çözümleri.",
@@ -30,7 +30,7 @@ const brands = [
   {
     id: "smk-tasarim",
     number: "03",
-    title: "SMK Tasarım Atölyesi",
+    title: "Serhat Kuzu Atölyesi",
     subtitle: "",
     description:
       "Kurumsal üniforma tasarımı ve üretimi. Teknik koleksiyon geliştirme ve profesyonel üretim çözümleri.",
@@ -143,7 +143,7 @@ function Header() {
               Serhat Kuzu
             </span>
             <span className="text-[9px] font-medium uppercase tracking-[0.38em] text-white/50 sm:text-[10px]">
-              Costume Designer
+              Costume Desıgner
             </span>
           </span>
         </a>
@@ -174,7 +174,7 @@ function Hero() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
         <div>
           <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.45em] text-[#d7a762] sm:mb-6">
-            Costume Designer
+            Costume Desıgner
           </p>
           <h1 className="max-w-4xl font-serif text-[clamp(2.8rem,10vw,7.5rem)] font-light uppercase leading-[0.88] tracking-tighter">
             Serhat Kuzu
@@ -188,14 +188,14 @@ function Hero() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href="/portfolio.pdf"
-              className="inline-flex h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762] md:hidden"
+              className="inline-flex h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762] lg:hidden"
             >
               Portfolyoyu İncele
               <ArrowIcon />
             </a>
             <a
               href={PORTFOLIO_HREF}
-              className="hidden h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762] md:inline-flex"
+              className="hidden h-14 items-center justify-center gap-3 border border-[#d7a762] bg-[#d7a762] px-8 text-xs font-bold uppercase tracking-[0.22em] text-[#090705] transition hover:bg-transparent hover:text-[#d7a762] lg:inline-flex"
             >
               Portfolyoyu İncele
               <ArrowIcon />
@@ -293,7 +293,7 @@ function BrandsSection() {
                       </div>
                     )}
 
-                    <h2 className="font-serif text-[2.05rem] uppercase leading-[0.96] tracking-tight text-[#14110e]">
+                    <h2 className="font-serif text-[1.7rem] uppercase leading-[1.05] tracking-tight text-[#14110e] break-words sm:text-[1.85rem] lg:text-[2.05rem] lg:leading-[0.96]">
                       {brand.title}
                     </h2>
 
@@ -366,7 +366,7 @@ function Footer() {
                     Serhat Kuzu
                   </p>
                   <p className="mt-1 text-[10px] uppercase tracking-[0.38em] text-white/45">
-                    Costume Designer
+                    Costume Desıgner
                   </p>
                 </div>
               </div>
@@ -386,7 +386,7 @@ function Footer() {
                   Kostüm atölye: Nişantaşı Satre
                 </span>
                 <span className="block text-white/45">
-                  SMK Tasarım Atölyesi: Giyimkent
+                  Serhat Kuzu Atölyesi: Giyimkent
                 </span>
                 <span className="block text-white/45">
                   Artıbirtakım: Adatepe Maltepe

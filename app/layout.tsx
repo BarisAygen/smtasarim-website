@@ -16,7 +16,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Serhat Kuzu | Costume Designer",
   description:
-    "Dizi, film, sinema, tiyatro ve kurumsal projeler için kostüm tasarımı. Serhat Kuzu, artibirtakım ve SMK Tasarım Atölyesi.",
+    "Dizi, film, sinema, tiyatro ve kurumsal projeler için kostüm tasarımı. Serhat Kuzu — yaratıcı tasarım ve teknik üretim.",
 };
 
 export default function RootLayout({
