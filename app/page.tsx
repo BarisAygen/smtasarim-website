@@ -19,7 +19,7 @@ const brands = [
   {
     id: "artibirtakim",
     number: "02",
-    title: "ARTİBİRTAKIM",
+    title: "ARTIBİRTAKIM",
     subtitle: "CREATIVE STUDIO",
     description:
       "Dizi, film, tiyatro ve sahne sanatlarına yönelik yaratıcı tasarım, üretim ve uygulama çözümleri.",
