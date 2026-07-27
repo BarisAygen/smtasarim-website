@@ -15,33 +15,33 @@ const brands = [
     image: "/column-serhat-kuzu.png",
     imageSide: "right" as const,
     showLogo: false,
-    forceUppercase: true,
   },
   {
     id: "artibirtakim",
     number: "02",
-    title: "artıbirtakım",
+    title: "ARTIBIRTAKIM",
     subtitle: "CREATIVE STUDIO",
     description:
       "Dizi, film, tiyatro ve sahne sanatlarına yönelik yaratıcı tasarım, üretim ve uygulama çözümleri.",
     image: "/column-artibirtakim.png",
     imageSide: "right" as const,
     showLogo: false,
-    forceUppercase: false,
   },
   {
     id: "smk-tasarim",
     number: "03",
-    title: "Serhat Kuzu\u00A0Atölyesi",
+    title: "Serhat Kuzu Atölyesi",
     subtitle: "",
     description:
       "Kurumsal üniforma tasarımı ve üretimi. Teknik koleksiyon geliştirme ve profesyonel üretim çözümleri.",
     image: "/column-smk.png",
     imageSide: "right" as const,
     showLogo: false,
-    forceUppercase: false,
   },
 ];
+
+const brandTitleClassName =
+  "font-serif text-[1.75rem] font-normal uppercase leading-[1.08] tracking-tight text-[#14110e] sm:text-[1.85rem] md:text-[1.45rem] md:leading-[1.12] lg:text-[1.65rem] xl:text-[1.75rem]";
 
 const expertise = [
   { label: "Kostüm Tasarımı", icon: "costume" },
@@ -261,24 +261,9 @@ function BrandsSection() {
                   : ""
               }`}
             >
-              <div className="grid min-h-[360px] grid-cols-1 sm:grid-cols-[44%_56%] md:min-h-[390px]">
+              <div className="flex min-h-[360px] flex-col sm:grid sm:min-h-[360px] sm:grid-cols-[44%_56%] md:flex md:min-h-[520px] md:flex-col lg:min-h-[540px]">
                 <div
-                  className={`relative min-h-[240px] bg-[#e8e4dc] ${
-                    brand.imageSide === "right" ? "sm:order-2" : ""
-                  }`}
-                >
-                  <Image
-                    src={brand.image}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 100vw, 16vw"
-                    className={`object-contain object-bottom opacity-[0.88] ${
-                      brand.imageSide === "right" ? "object-right" : "object-left"
-                    }`}
-                  />
-                </div>
-                <div
-                  className={`flex flex-col justify-between p-7 sm:p-8 ${
+                  className={`relative z-10 flex flex-col justify-between bg-[#e8e4dc] p-7 sm:p-8 md:p-6 md:pb-4 lg:p-7 ${
                     brand.imageSide === "right" ? "sm:order-1" : ""
                   }`}
                 >
@@ -296,13 +281,7 @@ function BrandsSection() {
                       </div>
                     )}
 
-                    <h2
-                      className={`font-serif text-[1.7rem] leading-[1.05] tracking-tight text-[#14110e] sm:text-[1.85rem] lg:text-[2.05rem] lg:leading-[0.96] ${
-                        brand.forceUppercase ? "uppercase" : ""
-                      }`}
-                    >
-                      {brand.title}
-                    </h2>
+                    <h2 className={brandTitleClassName}>{brand.title}</h2>
 
                     {brand.subtitle ? (
                       <p className="mt-2 text-[10px] font-semibold tracking-[0.3em] text-[#14110e]/45">
@@ -314,7 +293,21 @@ function BrandsSection() {
                       {brand.description}
                     </p>
                   </div>
-
+                </div>
+                <div
+                  className={`relative z-0 min-h-[220px] shrink-0 overflow-hidden bg-[#e8e4dc] sm:min-h-[240px] md:mt-auto md:min-h-[260px] md:flex-1 lg:min-h-[280px] ${
+                    brand.imageSide === "right" ? "sm:order-2" : ""
+                  }`}
+                >
+                  <Image
+                    src={brand.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 16vw"
+                    className={`object-contain object-bottom opacity-[0.88] ${
+                      brand.imageSide === "right" ? "object-right" : "object-left"
+                    }`}
+                  />
                 </div>
               </div>
             </article>
