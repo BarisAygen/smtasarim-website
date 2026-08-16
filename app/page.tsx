@@ -30,8 +30,8 @@ const brands = [
   {
     id: "smk-tasarim",
     number: "03",
-    title: "Serhat Kuzu Atölyesi",
-    subtitle: "",
+    title: "SMK TASARIM ATÖLYESİ",
+    subtitle: "UNIFORM-WORKWEAR",
     description:
       "Kurumsal üniforma tasarımı ve üretimi. Teknik koleksiyon geliştirme ve profesyonel üretim çözümleri.",
     image: "/column-smk.png",
@@ -376,7 +376,7 @@ function Footer() {
                   Kostüm Atölye: Nişantaşı Satre
                 </span>
                 <span className="block text-white/45 whitespace-nowrap">
-                  Serhat Kuzu Atölyesi: Giyimkent
+                  SMK Tasarım Atölyesi: Giyimkent
                 </span>
                 <span className="block text-white/45">
                   Artıbirtakım: Adatepe Maltepe
